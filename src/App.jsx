@@ -29,7 +29,7 @@ function App() {
        },{withCredentials:true})
         if(rees.data.message==="password changed"){
           setsuccess(false)
-          setmessage("password changed successfully")
+          setmessage(rees.data.message)
         }
   }
   return (
