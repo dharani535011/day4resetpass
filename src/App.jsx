@@ -31,6 +31,7 @@ function App() {
           setsuccess(false)
           setmessage(rees.data.message)
         }
+        console.log(rees.data.message)
   }
   return (
     <>
