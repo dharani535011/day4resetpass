@@ -30,8 +30,11 @@ function App() {
         if(rees.data.message==="password changed"){
           setsuccess(false)
           setmessage(rees.data.message)
+        }else{
+          setsuccess(false)
+          setmessage(rees.data.message)
         }
-        console.log(rees.data.message)
+        
   }
   return (
     <>
@@ -54,7 +57,7 @@ function App() {
 <button type="submit" class="btn btn-primary" onClick={handlelogin}>Submit</button>
 </form>
 
-  </div>):(<div className='w-100 d-flex justify-content-center align-items-center' id='login'><h1>{message}</h1></div>)}
+  </div>):(<div className='w-100 d-flex justify-content-center align-items-center' id='login'><h1>{message} {message==="password changed"?"":"refresh the site give correct values in inputs"}</h1></div>)}
        
       </div>
     </>
