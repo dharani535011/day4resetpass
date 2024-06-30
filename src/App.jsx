@@ -22,14 +22,14 @@ function App() {
 
   const handlelogin=async(e)=>{
        e.preventDefault()
-       const rees=await axios.post(`http://localhost:3500/user/resetpassword`,{
+       const rees=await axios.post(`https://nodesjstask4.onrender.com/user/resetpassword`,{
         otp:values.otp,
         password:values.password,
         repass:values.repassword
        },{withCredentials:true})
         if(rees.data.message==="password changed"){
           setsuccess(false)
-          setmessage("password chenged successfully")
+          setmessage("password changed successfully")
         }
   }
   return (
